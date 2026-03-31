@@ -43,7 +43,7 @@ The key is securely stored using the Windows Credential Manager.
 
 ---
 
-## 💀 What is this?
+## What is this?
 
 **Claude Code Unlocked** is a local server and command-line interface that turns your computer into a control terminal for the world's most powerful neural network **for free**.
 

